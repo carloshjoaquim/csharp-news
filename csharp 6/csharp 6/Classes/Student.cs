@@ -14,6 +14,7 @@ namespace csharp_6.Classes
 
         //Common properties
         public int Age { get; set;}
+        public string Class { get; set; }
 
         //Auto-Property Initializers
         public ICollection<double> Grades { get; } = new List<double>();
