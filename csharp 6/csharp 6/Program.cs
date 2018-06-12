@@ -1,6 +1,8 @@
 ﻿using csharp_6.Classes;
 using System;
+using System.Linq;
 using static System.String;
+using static System.Math;
 
 namespace csharp_6
 {
@@ -22,7 +24,17 @@ namespace csharp_6
                 Console.WriteLine("Grade: " + g.ToString());
             }
 
-            //
+            //using static for String
+            if (IsNullOrEmpty(student.Class))
+                student.Class = "2nd - A";
+
+            //using static for Math
+            var average = student.Grades.Average();
+            var squared_average = Pow(average, 2);
+            
+            //string interpolation
+            Console.WriteLine("Average of Grades: {0} - Squared Average: {1}", average, squared_average );
+
 
             Console.ReadKey();
         }
