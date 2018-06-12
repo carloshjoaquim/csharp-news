@@ -11,17 +11,20 @@ namespace csharp_6
         public static void Main(string[] args)
         {
             Student student = new Student("Carlos", "Joaquim");
-            Console.WriteLine(student.FirstName + " - First Name");
-            Console.WriteLine(student.LastName + " - Last Name");
+            //string interpolation
+            Console.WriteLine("First Name: {0}" , student.FirstName);
+            Console.WriteLine("Last Name: {0}", student.LastName);            
 
             student.Age = 25;
             student.Grades.Add(8);
             student.Grades.Add(6.4);
 
-            Console.WriteLine(student.Age + " - Age Name");
+            //string interpolation
+            Console.WriteLine("Age: {0}" , student.Age);
             foreach (double g in student.Grades)
             {
-                Console.WriteLine("Grade: " + g.ToString());
+                //string interpolation
+                Console.WriteLine("Grade: {0}", g.ToString());
             }
 
             //using static for String
