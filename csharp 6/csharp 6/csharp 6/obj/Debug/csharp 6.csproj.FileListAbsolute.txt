@@ -1,0 +1,7 @@
+F:\Github\csharp-news\csharp 6\csharp 6\csharp 6\bin\Debug\csharp 6.exe.config
+F:\Github\csharp-news\csharp 6\csharp 6\csharp 6\obj\Debug\csharp 6.csproj.CoreCompileInputs.cache
+F:\Github\csharp-news\csharp 6\csharp 6\csharp 6\bin\Debug\csharp 6.exe
+F:\Github\csharp-news\csharp 6\csharp 6\csharp 6\bin\Debug\csharp 6.pdb
+F:\Github\csharp-news\csharp 6\csharp 6\csharp 6\obj\Debug\csharp 6.csprojAssemblyReference.cache
+F:\Github\csharp-news\csharp 6\csharp 6\csharp 6\obj\Debug\csharp 6.exe
+F:\Github\csharp-news\csharp 6\csharp 6\csharp 6\obj\Debug\csharp 6.pdb
