@@ -1,4 +1,4 @@
-C# Novos recursos adicionados no C# 6.0
+Novos recursos adicionados no C# 6.0
 ==============
 
 Exemplo de utilização dos recursos adicionados ao [C# 6.0 ](https://github.com/carloshjoaquim/csharp-news) em um Console Application simples.
@@ -12,7 +12,7 @@ Exemplo de utilização dos recursos adicionados ao [C# 6.0 ](https://github.com
 
 ### Recursos Aplicados
 
-1. Propriedades Automáticas somente Leitura
+#1. Propriedades Automáticas somente Leitura
     Recurso que permite deixar a sintaxe na criação de tipos que não poderão ser alterados mais concisa.
     Nas versões anteriores esse tipo de declaração era feito da seguinte forma:
     ```csharp
