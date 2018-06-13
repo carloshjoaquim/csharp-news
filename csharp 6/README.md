@@ -1,22 +1,25 @@
 C# Novos recursos adicionados no C# 6.0
 ==============
 
-Exemplo de como utilizar o módulo [Brasil](https://github.com/gammasoft/brasil) para consultar a receita federal
-
-### Demonstração
-
-http://brasil.gammasoft.com.br
+Exemplo de utilização dos recursos adicionados ao [C# 6.0 ](https://github.com/carloshjoaquim/csharp-news) em um Console Application simples.
 
 ### Instalação
 
-1. Faça o clone deste projeto com `git clone https://github.com/gammasoft/brasil-exemplo.git`
-2. Entre na pasta do projeto e instale as dependências com `npm install`
-3. Rode a aplicação com `node app`
+1. Faça o clone deste projeto com `git clone https://github.com/carloshjoaquim/csharp-news.git`
+2. Entre na pasta do projeto cshap 6 com `cd csharp-news/csharp\ 6`
+3. Rode a aplicação com o Visual Studio (2017+)
 
-### Testando a aplicação
 
-1. Abra o browser e visite a página `http://localhost:9000`
+### Recursos Aplicados
 
-### Screenshot
+1. Propriedades Automáticas somente Leitura
+    Recurso que permite deixar a sintaxe na criação de tipos que não poderão ser alterados mais concisa.
+    Nas versões anteriores esse tipo de declaração era feito da seguinte forma:
+    ```csharp
+     public string FirstName { get; private set;}
+    ```
+    Com o C# 6.0 é possível simplificar a declaração mantendo a propriedade acessível apenas a partir do seu construtor:
+    ```csharp
+     public string FirstName { get; }
+    ```
 
-![screen shot](https://cloud.githubusercontent.com/assets/522043/4519537/2db30ec8-4cc0-11e4-8957-34cbb0fd1b75.png)
