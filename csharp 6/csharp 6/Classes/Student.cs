@@ -19,11 +19,16 @@ namespace csharp_6.Classes
         //Auto-Property Initializers
         public ICollection<double> Grades { get; } = new List<double>();
 
+        //Expression-bodied 
+        public string FullName => $"{FirstName} {LastName}";
+
         public Student(string firstName, string lastName)
         {
             FirstName = firstName;
             LastName = lastName;
         }
+
+        public Student() { }
 
     }
 }
