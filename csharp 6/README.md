@@ -12,13 +12,14 @@ Exemplo de utilização dos recursos adicionados ao [C# 6.0 ](https://github.com
 
 ### Recursos Aplicados
 
-#1. Propriedades Automáticas somente Leitura
-    Recurso que permite deixar a sintaxe na criação de tipos que não poderão ser alterados mais concisa.
-    Nas versões anteriores esse tipo de declaração era feito da seguinte forma:
+##1. Propriedades Automáticas somente Leitura
+
+    Recurso que permite deixar a sintaxe na criação de tipos que não poderão ser alterados mais concisa.<br/>
+    Nas versões anteriores esse tipo de declaração era feito da seguinte forma:<br/>
     ```csharp
      public string FirstName { get; private set;}
     ```
-    Com o C# 6.0 é possível simplificar a declaração mantendo a propriedade acessível apenas a partir do seu construtor:
+    Com o C# 6.0 é possível simplificar a declaração mantendo a propriedade acessível apenas a partir do seu construtor:<br/>
     ```csharp
      public string FirstName { get; }
     ```
