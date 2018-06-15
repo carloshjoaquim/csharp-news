@@ -18,20 +18,20 @@ namespace csharp_6
             Student student2 = new Student();
 
             //string interpolation + null - conditional operators
-            Console.WriteLine("First Name: {0}" , student?.FirstName);
-            Console.WriteLine("Last Name: {0}", student?.LastName);
-            Console.WriteLine("FullName : {0}", student?.FullName);
+            Console.WriteLine($"First Name: {student?.FirstName}");
+            Console.WriteLine($"Last Name: {student?.LastName}");
+            Console.WriteLine($"FullName : {student?.FullName}");
 
             student.Age = 25;
             student.Friends.Add("José");
-            student.Friends.Add("Marina");
+            student.Friends.Add("Maria");
 
             //string interpolation 
-            Console.WriteLine("Age: {0}" , student.Age);
+            Console.WriteLine($"Age: {student.Age}");
             foreach (KeyValuePair<string, double> g in student.MGrades)
             {
                 //string interpolation
-                Console.WriteLine("{0} : {1}", g.Key , g.Value);
+                Console.WriteLine($"{g.Key} : {g.Value}");
             }
 
             //using static for String
@@ -46,7 +46,7 @@ namespace csharp_6
             Console.WriteLine("Class: {0}", student?.Class);
 
             //string interpolation
-            Console.WriteLine("Average of Grades: {0} - Squared Average: {1}", average, squared_average );
+            Console.WriteLine($"Average of Grades: {average:F2} - Squared Average: {squared_average:F2}");
 
             //Exception Filters
             try
@@ -54,7 +54,7 @@ namespace csharp_6
                 var grade = student.Friends.ElementAt(10000);
                 Console.WriteLine(grade);
             }
-            catch(ArgumentOutOfRangeException ex) when (ex.StackTrace.Contains("OutOfRange"))
+            catch (ArgumentOutOfRangeException ex) when (ex.StackTrace.Contains("OutOfRange"))
             {
                 Console.WriteLine("Filtered Exception- Invalid Index for grades list");
             }
