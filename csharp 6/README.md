@@ -102,3 +102,25 @@ Exemplo de utilização dos recursos adicionados ao [C# 6.0 ](https://github.com
           }
  ```
    Dessa forma sempre que houver uma exceção do tipo filtrado contendo a mensagem "OutOfRange" no StackTrace, o cath será disparado com a mensagem "Filtered Exception  - Invalid Index for Grades list")
+   
+### 8. Expressões (nameof)
+
+  Recurso que permite a utilização do nome de uma variável, propriedade ou campo de um objeto. É muito utilizado para fornecer o item que causou a exceção como no exemplo:
+```csharp
+if (IsNullOrWhiteSpace(lastName))
+                Console.WriteLine("Parameter cannot be blank: {0}", nameof(lastName));
+
+```
+### 9. Inicializadores de indíce
+
+   Permite inicializar uma coleção do tipo Dictionary<Tkey, Tvalue>. No exemplo, foi utilizado para inicializar o dicionário de notas do aluno.
+```csharp
+public Dictionary<string, double> MGrades = new Dictionary<string, double>
+        {
+            ["English"] = 6.5,
+            ["Math"] = 9.9,
+            ["Geography"] = 8.5,
+            ["History"] = 8,
+        };
+```
+
