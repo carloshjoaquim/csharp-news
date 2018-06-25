@@ -3,13 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using static System.String;
 
-namespace csharp_6.Classes
+namespace csharp_7.Classes
 {
     public class Student
     {
-        //Read-only properties
-        public string FirstName { get; }
-        public string LastName { get; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
 
         //Common properties
         public int Age { get; set;}
@@ -22,13 +21,7 @@ namespace csharp_6.Classes
         public string FullName => $"{FirstName} {LastName}";
 
         //Index Initializers
-        public Dictionary<string, double> MGrades = new Dictionary<string, double>
-        {
-            ["English"] = 6.5,
-            ["Math"] = 9.9,
-            ["Geography"] = 8.5,
-            ["History"] = 5.5,
-        };
+        public Dictionary<string, double> MGrades;
 
         public Student(string firstName, string lastName)
         {
