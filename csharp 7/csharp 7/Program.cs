@@ -87,22 +87,24 @@ namespace csharp_7
             (string matter, double vgrade) = student.BestMatter();
             Console.WriteLine("Your best Matter is {0} and your grade is : {1}", matter, vgrade);
 
-            // discards
+            // Discards
             (string worst, _) = student.WorstMatter();
             Console.WriteLine("Your worst Matter is: {0} ", worst);
 
             // Pattern matching 
             if (student3 is Master master)
             {
-                Console.WriteLine($"The {nameof(student)} is Master !");
+                Console.WriteLine($"The {nameof(student3)} is Master !");
                 Console.WriteLine($"The Thesis of Master degree is: {master.ThesisName}");
             }
             if (student is Student std)
             {
                 Console.WriteLine($"The {nameof(student)} is Student !");
                 Console.WriteLine($"Class of student is:  {std.Class}");
-
             }
+
+            // Ref returns
+            
 
 
             Console.ReadKey();
