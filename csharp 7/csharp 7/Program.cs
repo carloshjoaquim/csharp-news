@@ -77,8 +77,10 @@ namespace csharp_7
 
             // out variables
             if (student.Passed("History", out double note))
+            { 
                 Console.WriteLine("Passed ! The note is: {0}", note);
-            else
+            }
+                else
             {
                 Console.WriteLine("Not Passed in History! The note is: {0}", note);
             }
@@ -97,9 +99,9 @@ namespace csharp_7
                 Console.WriteLine($"The {nameof(student3)} is Master !");
                 Console.WriteLine($"The Thesis of Master degree is: {master.ThesisName}");
             }
-            if (student is Student std)
+            if (student3 is Student std)
             {
-                Console.WriteLine($"The {nameof(student)} is Student !");
+                Console.WriteLine($"The {nameof(student3)} is Student !");
                 Console.WriteLine($"Class of student is:  {std.Class}");
             }
 
