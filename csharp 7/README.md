@@ -15,8 +15,9 @@ Exemplo de utilização dos recursos adicionados ao [C# 7.0 ](https://github.com
 
 ### 1. Variáveis out 
 
-    Aperfeiçoamento do uso de variáveis out das versões anteriores, antes era necessário declarar a variável antes 
-    da sua utilização na chamada de um método, por exemplo, agora é possível efetuar a declaração na própria chamada.
+    Aperfeiçoamento do uso de variáveis out das versões anteriores, antes era necessário declarar a variável 
+    antes da sua utilização na chamada de um método, por exemplo, agora é possível efetuar a declaração 
+    na própria chamada.
 ```csharp
          if (student.Passed("History", out double note))
         {
@@ -30,9 +31,9 @@ Exemplo de utilização dos recursos adicionados ao [C# 7.0 ](https://github.com
 
 ### 2. Tuplas
 
-    As tuplas já existiam em versões anteriores ao C# 7.0, porém, a implementação e uso eram ineficientes, por exemplo,
-    não era possível nomear os elementos de uma tupla (Era apenas Item1, Item2...). A partir do C# 7.0 é possível dar nomes 
-    semânticos para os campos de uma tupla.
+    As tuplas já existiam em versões anteriores ao C# 7.0, porém, a implementação e uso eram ineficientes, 
+    por exemplo, não era possível nomear os elementos de uma tupla (Era apenas Item1, Item2...). 
+    A partir do C# 7.0 é possível dar nomes semânticos para os campos de uma tupla.
 ```csharp  
         (string matter, double vgrade) = student.BestMatter();
         Console.WriteLine("Your best Matter is {0} and your grade is : {1}", matter, vgrade);
@@ -40,15 +41,16 @@ Exemplo de utilização dos recursos adicionados ao [C# 7.0 ](https://github.com
 
 ### 3. Descartes
 
-    Recurso adicionado para que não seja mais necessário a inclusão de parâmetros não utilizados no uso de tuplas ou 
-    métodos com variáveis out.
+    Recurso adicionado para que não seja mais necessário a inclusão de parâmetros não utilizados no uso de tuplas 
+    ou métodos com variáveis out.
     Antes ao C# 7.0 a desconstrução de uma tupla era algo da forma: 
 ```csharp  
         // O método WorstMatter() retorna uma tupla (string, double) para informar o nome da máteria e a sua nota.
         (string worst, double note) = student.WorstMatter();
 ```
     Porém, caso o valor da nota não fosse importante éramos obrigados a enviá-lo conforme exemplo acima. 
-    Com o uso de descartes (_) podemos ignorar os valores que não são importantes, basta adicionar o _ na posição a ser ignorada:
+    Com o uso de descartes (_) podemos ignorar os valores que não são importantes, basta adicionar o _ 
+    na posição a ser ignorada:
 ```csharp  
         (string worst, _) = student.WorstMatter();
 ```
