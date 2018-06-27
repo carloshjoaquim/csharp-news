@@ -36,7 +36,7 @@ namespace csharp_7.Classes
 
         public void InsertArticle(string name)
         {
-            this.PublishedArticles += 1;
+            PublishedArticles += 1;
             Articles.Add(name);
         }
 
@@ -44,6 +44,5 @@ namespace csharp_7.Classes
         {
             return ref PublishedArticles;
         }
-
     }
 }
