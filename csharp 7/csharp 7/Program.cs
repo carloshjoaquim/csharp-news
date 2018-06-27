@@ -104,7 +104,10 @@ namespace csharp_7
             }
 
             // Ref returns
-            
+            student3.InsertArticle("Theory of everthing");
+            ref int number = ref student3.NumberArticles();
+            Console.WriteLine($"Number of Articles:  {number}");
+
 
 
             Console.ReadKey();
