@@ -13,7 +13,9 @@ namespace csharp_7.Classes
         
         public string Mentor { get; set; }
 
-        public List<string> Articles { get; set; }
+        public List<string> Articles { get; set; } = new List<string>();
+
+        private int PublishedArticles = 0;
 
         public Master(string firstName, string lastName, string thesisName)
         {
@@ -21,12 +23,27 @@ namespace csharp_7.Classes
             if (IsNullOrWhiteSpace(lastName))
                 Console.WriteLine("Parameter cannot be blank: {0}", nameof(lastName));
 
+            // throw
+           ThesisName = IsNullOrEmpty(thesisName) ? throw new ArgumentNullException(paramName: nameof(thesisName),
+                message: "The thesis Name is required.") : thesisName;
+
             FirstName = firstName;
             LastName = lastName;
-            ThesisName = ThesisName;
         }
 
         // Expression-bodied
         public Master(string thesisName) => ThesisName = ThesisName;
+
+        public void InsertArticle(string name)
+        {
+            this.PublishedArticles += 1;
+            Articles.Add(name);
+        }
+
+        public ref int NumberArticles()
+        {
+            return ref PublishedArticles;
+        }
+
     }
 }
