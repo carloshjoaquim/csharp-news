@@ -48,7 +48,8 @@ Exemplo de utilização dos recursos adicionados ao [C# 7.1 ](https://github.com
 
 ### 3. Nomes de elementos de tupla inferidos
 
-    Melhoria no recurso de tuplas para inicializá-las. Era necessário ao iniciar os valores da tupla, passar o nome do elemento e o valor:
+    Melhoria no recurso de tuplas para inicializá-las. 
+    Era necessário ao iniciar os valores da tupla, passar o nome do elemento e o valor:
 
 ```csharp  
         int count = 5;
