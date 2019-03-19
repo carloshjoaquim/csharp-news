@@ -10,12 +10,16 @@ namespace csharp_7._1
         {
             // Using await on Main
             var length = await AsyncMethodAsync();
-            Console.WriteLine($"Length of content: {length}.");            
+            Console.WriteLine($"Length of content: {length}.");
 
             Func<string, bool> expressionTest = default; // Put default value to properties, in this case <null, false>
-            Console.WriteLine($"Default values of expression: {expressionTest}");
-            Console.ReadKey();
 
+            var age = 20;
+            var name = "Inferred tuple element names";
+            var tuple = (age, name);
+            Console.WriteLine($"Values of tuple - Age: {tuple.age}, Name: {tuple.name} ");
+
+            Console.ReadKey();
         }
 
         private static async Task<int> AsyncMethodAsync()
