@@ -13,53 +13,57 @@ Exemplo de utilização dos recursos adicionados ao [C# 7.2 ](https://github.com
 
 ## Recursos Aplicados
 
-### 1. Async Main 
+### 1. Argumentos nomeados que não estejam à direita 
 
-    Permite utilizar await no método Main.
-    Antes era necessário realizar esse processo da seguinte forma:
+    Agora as chamadas de método podem usar argumentos nomeados que precedem argumentos posicionais 
+    quando esses argumentos nomeados estão nas posições corretas:
 ```csharp
-        static int Main()
+         public static void printValues(string name, string lastName, int age = 18, string code = "Default Code")
         {
-            return DoAsyncWork().GetAwaiter().GetResult();
+            Console.WriteLine($"Name: {name}");
+            Console.WriteLine($"LastName: {lastName}");
+            Console.WriteLine($"Age: {age}");
+            Console.WriteLine($"Code: {code}");
+            Console.WriteLine("==");
         }
+
+        printValues(name: "Carlos", lastName: "Joaquim", 26);
+        printValues(lastName: "Example", name: "Person", age: 30, code: "Code ABC");
 ```    
-    Agora é possível adicionar o await na chamada do método mudando o Main para async Task<int> Main:
-```csharp
-         static async Task<int> Main()
+
+### 2. Modificador de acesso protegido privado
+
+    Um novo modificador de acesso composto: private protected indica que um membro pode ser 
+    acessado pela classe que o contém ou por classes derivadas que são declaradas no mesmo assembly. 
+    Enquanto que protected internal permite o acesso por classes derivadas ou classes que estejam no mesmo assembly, 
+    o private protected limita o acesso a tipos derivados declarados no mesmo assembly.
+
+```csharp  
+        public class Vehicle
+    {
+        public string Color { get; set; }
+        public int CV { get; set; }
+        public string Code { get; set; }
+
+
+        private protected void ShowProperties()
         {
-            return await DoAsyncWork();
+            Console.WriteLine($"Type: {Color}-{CV}-{Code}");
         }
+    }    
+```
+   Chamada na classe derivada:
+
+```csharp 
+        public class VehicleTest : Vehicle
+    {
+        new public void ShowProperties()
+        {
+            Console.WriteLine("Vehicle Properties: ");
+            base.ShowProperties();
+        }
+    }
+
 ```
 
-### 2. Expressões literais padrão
 
-    Simplificação na forma de definir o valor padrão de expressões literais.
-    Antes, era necessário escrever da seguinte forma:
-
-```csharp  
-        Func<string, bool> whereClause = default(Func<string, bool>);
-```
-    Agora é possível setar o valor padrão de form asimplificada:
-
-```csharp  
-        Func<string, bool> whereClause = default;
-```
-
-
-### 3. Nomes de elementos de tupla inferidos
-
-    Melhoria no recurso de tuplas para inicializá-las. 
-    Era necessário ao iniciar os valores da tupla, passar o nome do elemento e o valor:
-
-```csharp  
-        int count = 5;
-        string label = "Colors used in the map";
-        var pair = (count: count, label: label);
-```
-    Agora é possível passar apenas os valores, desde que tenham os mesmos nomes:
-
-```csharp  
-        int count = 5;
-        string label = "Colors used in the map";
-        var pair = (count, label);
-```
