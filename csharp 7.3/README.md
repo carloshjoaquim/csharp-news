@@ -15,7 +15,8 @@ Exemplo de utilização dos recursos adicionados ao [C# 7.3 ](https://github.com
 
 ### 1. Reatribuir variáveis locais ref
 
-    Agora, as variáveis locais ref podem ser reatribuídas para se referir a diferentes instâncias depois de serem inicializadas
+    Agora, as variáveis locais ref podem ser reatribuídas para se referir a 
+    diferentes instâncias depois de serem inicializadas:
 ```csharp
         var myStruct = new MyStruct();
         var myAnotherStruct = new MyStruct();
@@ -26,7 +27,7 @@ Exemplo de utilização dos recursos adicionados ao [C# 7.3 ](https://github.com
 
 ### 2. Matrizes stackalloc são compatíveis com inicializadores
 
-    você consegue especificar os valores dos elementos em uma matriz ao inicializá-la
+    Você consegue especificar os valores dos elementos em uma matriz ao inicializá-la
 
 ```csharp  
          private unsafe void Foo()
